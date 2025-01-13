@@ -9,3 +9,6 @@ back-build:
 
 back-run: 
 	docker run -it  -p 8001:8001  algo-back  
+
+all: front-build back-build
+	docker compose up
