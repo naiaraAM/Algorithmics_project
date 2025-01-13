@@ -128,7 +128,7 @@ def mapbox_map(request):
     return render(request, 'pages/mapbox_map.html', context)
 
 def do_post_point(latitude, longitude):
-    IP_ADDRESS = '172.17.155.252'
+    IP_ADDRESS = 'back'
     PORT = '8001'
     URL = f'http://{IP_ADDRESS}:{PORT}/'
     json_data = {'lat': latitude, 'lng': longitude}

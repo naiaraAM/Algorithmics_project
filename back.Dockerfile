@@ -6,19 +6,17 @@ ARG GOARCH="arm64"
 
 ARG CMD="http"
 
+COPY app /app
+
 WORKDIR /app
-
-COPY cmd/${CMD} cmd/${CMD}
-COPY pkg/ pkg/
-COPY internal internal
-
-COPY go.mod go.mod
-COPY go.sum go.sum
 
 RUN go build -o main ./cmd/${CMD}/main.go
 
-EXPOSE 8000
+EXPOSE 8001
 
 FROM alpine:3.19 as prod
 COPY --from=builder /app/main /bin/
+COPY --from=builder /app/cmd/http/tartu_stops.csv /bin/tartu_stops.csv
+
+WORKDIR /bin
 ENTRYPOINT  ["/bin/main"]

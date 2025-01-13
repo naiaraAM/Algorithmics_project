@@ -3,3 +3,9 @@ front-build:
 
 front-run: 
 	docker run -it  -p 3000:3000  algo-front  
+
+back-build:
+	docker build -t algo-back -f back.Dockerfile .
+
+back-run: 
+	docker run -it  -p 8001:8001  algo-back  
