@@ -5,7 +5,6 @@ from django.conf import settings
 import json
 import math
 import extract_info_csv
-from numba.cuda.printimpl import print_item
 
 
 def haversine_distance(lat1, lng1, lat2, lng2):
