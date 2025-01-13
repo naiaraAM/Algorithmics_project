@@ -1,5 +1,4 @@
 # Algorithmics final project
-
-<a href="https://github.com/naiaraAM/Algorithmics_project/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=naiaraAM/Algorithmics_project" />
-</a>
+### Contributors:
+- [Naiara Alonso Montes](https://github.com/naiaraAM)
+- [Juan Gonzalo Quiroz Cadavid](https://github.com/JuanGQCadavid)
